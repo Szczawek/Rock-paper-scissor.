@@ -1,0 +1,332 @@
+::before,
+::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  cursor: pointer;
+  display: block;
+  border: none;
+}
+/* STARTER PACK | */
+
+body {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 20% 80%;
+  height: 100vh;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  overflow: hidden;
+  background-image: radial-gradient(
+    at top,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+}
+
+/* header */
+
+body > header {
+  margin-top: 2em;
+}
+body > header > section {
+  font-size: 2rem;
+  display: flex;
+  padding: .5em .8em;
+  justify-content: space-between;
+  width: clamp(260px, 700px, 90vw);
+  margin-inline: auto;
+  border-radius: 8px;
+  border: 0.1em solid hsl(217, 16%, 45%);
+}
+body > header > section > div {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: .2em 5%;
+  display: grid;
+  place-content: center;
+}
+.score_text {
+  font-size: .7em;
+  letter-spacing: .1em;
+  color: hsl(229, 64%, 46%);
+}
+.score_number {
+  color: hsl(229, 25%, 31%);
+  font-size: 2em;
+}
+
+/* MAIN-BOX */
+main {
+  display: grid;
+  grid-template-rows: 90% 10%;
+}
+
+main > section {
+  display: grid;
+  grid-template-columns: repeat(2, 100vw);
+  grid-template-rows: 100%;
+}
+
+/* stage-One */
+.content > section:nth-child(1) {
+  display: grid;
+  place-content: center;
+}
+
+/* ROCK,PAPER,SCISSORS */
+.start {
+  position: relative;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+}
+.start .circle {
+  height:clamp(6em, 18vw, 20em);
+}
+.paper {
+  box-shadow: inset 0 clamp(-.4em, -.6em, -.6vw) hsla(230, 87%, 44%, 0.61);
+  background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+.paper_poz {
+  right: -22%;
+  top: 18%;
+}
+.scissors {
+  box-shadow: inset 0 clamp(-.4em, -.6em, -.6vw) hsl(40, 84%, 40%);
+  background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+.scissors_poz {
+  left: 30%;
+  top: -25%;
+}
+
+.rock {
+  box-shadow: inset 0 clamp(-.4em, -.6em, -.6vw) hsl(349, 70%, 40%);
+  background-image: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+.rock_poz {
+  top: 80%;
+  left: 60%;
+}
+.lizard {
+  box-shadow: inset 0 clamp(-.4em, -.6em, -.6vw) hsla(261, 72%, 40%, 0.863);
+  background-image: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+}
+.lizard_poz {
+  top: 80%;
+}
+.spock {
+  box-shadow: inset 0 clamp(-.4em, -.6em, -.6vw) hsl(189, 58%, 40%);
+  background-image: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+}
+.spock_poz {
+  top: 18%;
+  left: -22%;
+}
+.circle {
+  height: 100%;
+  max-height: 9.5em;
+  border-radius: 50%;
+  padding: clamp(.5em,3em, 6%);
+  aspect-ratio: 1/1;
+}
+.item {
+  background-color: white;
+  display: grid;
+  box-shadow: inset 0 .4em #c2becc;
+  place-content: center;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.start > div:not(.pentagon) {
+  position: absolute;
+}
+.start > div:not(.pentagon) > div > img {
+  width: 80%;
+}
+
+.pentagon {
+  max-width: 60vw;
+  min-width: 12em;
+}
+/* btn-rules */
+.case-to-rules {
+  padding: 0 2em;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+button[class="rules"] {
+  background-color: transparent;
+  font-size: 1.2rem;
+  border: 2px solid hsl(217, 16%, 45%);
+  border-radius: 5px;
+  padding: 0.8em 1.2em;
+}
+
+/* game */
+.game {
+  max-height: 100%;
+  display: none;
+  text-align: center;
+  grid-template-columns: 40% 20% 40%;
+}
+.game > section:nth-child(1) > div {
+  cursor: pointer;
+}
+.game > section > header {
+  padding: 1em 0;
+}
+.message {
+  font-size: clamp(1.5em,2.5vw, 3em);
+}
+.pick {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 40vw;
+  max-width: 20em;
+  background-color: rgba(6, 6, 37, 0.274);
+}
+
+h2 {
+  font-size: clamp(1em,2vw, 2.5em);
+}
+.pick > div {
+  max-height: 20em;
+}
+.game > section:not(.figure) {
+  display: grid;
+  place-content: center;
+}
+/* section on choosing the next move */
+.figure {
+  border-radius: 1em;
+  border: .1em solid black;
+  position: relative;
+  background-color: #161D40;
+  box-shadow: .4em .9em 2em  rgb(6, 1, 34);
+  grid-column: 1/4;
+  display: grid;
+  margin-inline: auto;
+  place-items: center;
+  min-width: 60vw;
+  height: 10em;
+  grid-template-columns: repeat(5, 20%);
+}
+.figure .circle {
+  height: clamp(3.5em, 6vw, 10em);
+}
+.figure > div > button {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.figure > div > button > img {
+  max-width: 70%;
+}
+
+main > section > section:nth-child(2) > p {
+  text-align: center;
+  padding: 1em;
+  font-size: 2rem;
+}
+button[class="confirme"] {
+  background-color: #cccccc;
+  color: hsl(229, 25%, 31%);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: clamp(1em,2vw, 1.5em);
+  padding: 1em;
+  box-shadow: 8px 4px 6px 1px black;
+}
+/* rules */
+.container_rules {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  place-content: center;
+  backdrop-filter: brightness(50%);
+}
+.container_rules > section {
+  padding: 2em;
+  row-gap: 2em;
+  align-items: center;
+  grid-template-columns: repeat(2, 50%);
+  border-radius: 8px;
+  display: grid;
+  background-color: #fff;
+}
+.container_rules > section > div {
+  grid-column: 1/3;
+}
+
+h3 {
+  font-size: 2.2em;
+  color: hsl(229, 25%, 31%);
+}
+
+.container_rules button {
+  display: flex;
+  justify-content: end;
+  background-color: transparent;
+}
+@media (width < 600px) {
+
+  /* rules */
+  .container_rules > section {
+    grid-template-columns: 100%;
+    width: 100vw;
+    height: 100vh;
+    justify-items: center;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .game {
+    width: 100%;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3,auto);
+  }
+  .figure {
+    height: 6em;
+    width: 100%;
+  }
+  .next {
+    grid-area: 2/1/3/3;
+  }
+}
+
+.choose {
+  margin-inline: auto;
+  min-width: 90%;
+  min-height: 8em;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.choose > div {
+  display: grid;
+  place-content: center;
+  background-color: rgba(14, 14, 61, 0.301);
+}
+.choose > div > button > img {
+  aspect-ratio: 1/1;
+  max-width: 4em;
+  padding: 1em;
+}

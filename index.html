@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock, Paper, Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <section>
+        <header>
+          <img id="return" src="images/logo-bonus.svg" alt="logo" />
+        </header>
+        <div>
+          <p class="score_text">SCORE</p>
+          <p id="score" class="score_number">0</p>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section class="content">
+        <section id="segment-one">
+          <div id="stage-one" class="start">
+            <div class="pentagon">
+              <img src="images/bg-pentagon.svg" alt="" />
+            </div>
+            <div class="paper circle paper_poz">
+              <div class="item">
+                <img src="images\icon-paper.svg" alt="paper" />
+              </div>
+            </div>
+            <div class="scissors circle scissors_poz">
+              <div class="item">
+                <img src="images\icon-scissors.svg" alt="scissors" />
+              </div>
+            </div>
+            <div class="rock circle rock_poz">
+              <div class="item">
+                <img src="images\icon-rock.svg" alt="rock" />
+              </div>
+            </div>
+            <div class="lizard circle lizard_poz">
+              <div class="item">
+                <img src="images/icon-lizard.svg" alt="lizard" />
+              </div>
+            </div>
+
+            <div class="spock circle spock_poz">
+              <div class="item">
+                <img src="images/icon-spock.svg" alt="spock" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="case-of-game" class="game">
+          <section>
+            <header>
+              <h2>YOU PICKED</h2>
+            </header>
+              <div id="your-pick" class="pick"></div>
+          </section>
+          <section class="next">
+            <p class="message"></p>
+            <button class="confirme" id="confirme">Confirme</button>
+          </section>
+          <section>
+            <header><h2>YOUR HOUSE PICKED</h2></header>
+              <div id="computerMove" class="pick"></div>
+          </section>
+
+          <section class="figure">
+              <div class="paper circle">
+                <button id="choice" value="paper" class="item">
+                  <img src="images\icon-paper.svg" alt="" />
+                </button>
+              </div>
+              <div class="scissors circle">
+                <button id="choice" value="scissors" class="item">
+                  <img src="images\icon-scissors.svg" alt="" />
+                </button>
+              </div>
+              <div class="rock circle">
+                <button id="choice" value="rock" class="item">
+                  <img src="images\icon-rock.svg" alt="" />
+                </button>
+              </div>
+              <div class="lizard circle">
+                <button id="choice" class="item" value="lizard">
+                  <img src="images/icon-lizard.svg" alt="" />
+                </button>
+              </div>
+              <div class="spock circle">
+                <button id="choice" class="item" value="spock">
+                  <img src="images/icon-spock.svg" alt="" />
+                </button>
+              </div>
+          </section>
+        </section>
+      </section>
+      <div class="case-to-rules">
+        <button class="rules" id="rules">RULES</button>
+      </div>
+    </main>
+    <section class="container_rules" id="rules-of-game">
+      <section>
+        <header><h3>RULES</h3></header>
+        <button class="close" id="close-rules">
+          <img src="images/icon-close.svg" alt="button close" />
+        </button>
+        <div>
+          <img
+            src="images/image-rules-bonus.svg"
+            alt="rule for 'rock,paper,scissors,lizard,spock'" />
+        </div>
+      </section>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
